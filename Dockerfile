@@ -32,4 +32,4 @@ RUN apt-get update \
 # Cleanup APT when done.
 && apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* 
 
-CMD mapcrafter_markers -c mapcrafter.conf && mapcrafter -c mapcrafter.conf
+CMD mapcrafter_markers -c mapcrafter.conf && mapcrafter -j 2 -c mapcrafter.conf
